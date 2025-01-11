@@ -40,7 +40,7 @@ jobs:
             git clone https://github.com/Oluwaseun186/testcluster.git testcluster
             cd testcluster/templates
 
-            sed -i 's/testing/testings/' deployment.yaml.yaml
+            sed -i 's/testing/testings/' deployment.yaml
             sed -i 's/testing/testings/' service.yaml
             cat deployment.yaml
             git remote add testcluster https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Oluwaseun186/testcluster.git
