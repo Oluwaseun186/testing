@@ -38,7 +38,7 @@ jobs:
             git config --global user.email "adewumibode7@gmail.com"
             git config --global user.name "Oluwaseun186"
             git clone https://github.com/Oluwaseun186/testcluster.git testcluster
-            cd testcluster/Chart.yaml
+            cd Chart.yaml
 
             sed -i 's/version:1.0.1/version:1.1.1/' Chart.yaml
             cat deployment.yaml
