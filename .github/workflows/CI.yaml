@@ -41,7 +41,7 @@ jobs:
             
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
-            git remote add testcluster origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/https://Oluwaseun186/testcluster.git
+            git remote add origin https://${{ secrets.GH_TOKEN }}@github.com/https://Oluwaseun186/testcluster.git
             git add .
             git commit -m "Updated helm 1"
             git push testcluster origin
