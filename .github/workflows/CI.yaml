@@ -40,6 +40,6 @@ jobs:
             cat deployment.yaml
             git add -A
             git commit -m "Updated helm 1"
-            git remote set-url origin https://x-access-token:${{ secrets.CI_CD }}@github.com/Oluwaseun186/testcluster.git
-            git push testcluster origin
+            git remote set-url origin https://x-access-token:${{ secrets.CI_CD }}@github.com/Oluwaseun186/testing.git
+            git push testing origin
                        
