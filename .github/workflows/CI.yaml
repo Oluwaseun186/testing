@@ -42,5 +42,5 @@ jobs:
             cat deployment.yaml
             git add .
             git commit -m "Updated helm 1"
-            git push testcluster origin
+            git push Oluwaseun186/testcluster origin
                        
