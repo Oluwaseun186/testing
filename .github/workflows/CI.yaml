@@ -28,7 +28,7 @@ jobs:
             docker push oluwaseun7/testing-docker:1.1.1
             
  
-        - name: "Go to the repo for Helm"
+        - name: Go to the repo for Helm
           env:
             GH_TOKEN: ${{ github.token }}
           run: |
