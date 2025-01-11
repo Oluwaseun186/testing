@@ -35,8 +35,8 @@ jobs:
             git config --global user.name "Oluwaseun186"
             git clone https://github.com/Oluwaseun186/testcluster.git my-chart
             cd my-chart
-            cd testcluster/templates
-            
+            cd my-chart/templates
+
             #string editor 
             sed -i 's/testing:1/testing:2/' deployment.yaml
             cat deployment.yaml
