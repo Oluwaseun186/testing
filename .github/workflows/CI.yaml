@@ -43,7 +43,5 @@ jobs:
             git add -A
             git commit -m "Updated helm 1"
             git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Oluwaseun186/testcluster.git/
-            gh repo create testcluster --public
-            git remote add testcluster https://github.com/Oluwaseun186/testcluster.git
             git push testcluster origin
                        
