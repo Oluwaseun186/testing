@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: 'Checkout code'
+        - name: "Checkout code"
           uses: actions/checkout@v4
           
         - name: "Build Docker image"
@@ -26,4 +26,5 @@ jobs:
         - name: Push Docker image
           run: |
             docker push oluwaseun7/testing-docker:1.0.1
+            
             
