@@ -4,10 +4,12 @@ on:
   push:
     branches:
             - origin
-
+permissions:
+          contents: write
 jobs: 
     building:
         runs-on: ubuntu-latest
+       
 
         steps:
         - name: "Checkout code"
@@ -43,4 +45,8 @@ jobs:
             git add .
             git commit -m "Updated helm 1"
             git push https://adewumibode7:${GH_TOKEN}@github.com/Oluwaseun186/testcluster origin
-                       
+            
+        - name: Deploy application
+          run: |
+            kubectl apply -f deployment.yaml
+            kubectl apply -f service.yaml                      
