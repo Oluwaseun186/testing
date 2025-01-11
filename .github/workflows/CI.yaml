@@ -40,8 +40,8 @@ jobs:
             #string editor 
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
-            git add -A
-            git commit -m "Updated helm 1"
             git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/https://github.com/Oluwaseun186/testcluster.git
+            git add .
+            git commit -m "Updated helm 1"
             git push testcluster origin
                        
