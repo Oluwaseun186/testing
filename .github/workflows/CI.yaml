@@ -24,6 +24,7 @@ jobs:
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
             
         - name: Push Docker image
+         # git clone https://github.com/Oluwaseun186/testcluster.git testcluster
           run: |
             docker push oluwaseun7/testing-docker:1.1.1
             
@@ -35,12 +36,12 @@ jobs:
             
             git config --global user.email "adewumibode7@gmail.com"
             git config --global user.name "Oluwaseun186"
-            git clone https://github.com/Oluwaseun186/testcluster.git testcluster
+            git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Oluwaseun186/testcluster.git
             cd testcluster/templates
             #string editor 
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
-            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/https://github.com/Oluwaseun186/testcluster.git
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Oluwaseun186/testcluster.git
             git add .
             git commit -m "Updated helm 1"
             git push testcluster origin
