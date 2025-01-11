@@ -34,12 +34,11 @@ jobs:
             git config --global user.email "adewumibode7@gmail.com"
             git config --global user.name "Oluwaseun186"
             git clone https://github.com/Oluwaseun186/testcluster.git testcluster
-          
             cd testcluster/templates
-
             #string editor 
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
             git add -A
-            git commit -m "Updated helm"
+            git commit -m "Updated helm 1"
+            git push testcluster origin
                        
