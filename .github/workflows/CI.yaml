@@ -40,6 +40,7 @@ jobs:
             cd testcluster/templates
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Oluwaseun186/testcluster.git
             git add .
             git commit -m "Updated helm 1"
             git push https://adewumibode7:${GH_TOKEN}@github.com/Oluwaseun186/testcluster origin
