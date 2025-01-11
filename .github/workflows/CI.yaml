@@ -38,10 +38,8 @@ jobs:
             git config --global user.name "Oluwaseun186"
             git clone https://github.com/Oluwaseun186/testcluster.git testcluster
             cd testcluster/templates
-            
             sed -i 's/testing-docker:1.0.1/testing-docker:1.1.1/' deployment.yaml
             cat deployment.yaml
-            git remote add main https://${{ secrets.GH_TOKEN }}@github.com/https://Oluwaseun186/testcluster.git
             git add .
             git commit -m "Updated helm 1"
             git push testcluster origin
